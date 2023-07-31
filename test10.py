@@ -29,17 +29,12 @@ elif op == "!":
     n = 1 
     for i in range(1,D+1) :
         n*= i
+        print(n)
 else :
     E = int(input("Enter a number: "))
     if E>=0 :
         print(math.sqrt)
     else :
         print("Erorr")
-
-    
-    print(n)
-else :
-    E = int(input("Enter a number: "))
-    print(math.sqrt(E))
     
     
