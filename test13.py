@@ -15,4 +15,5 @@ while True :
         print("Exist")
         break
     else :
-        print("Error")    
+        print("Error")
+        break
