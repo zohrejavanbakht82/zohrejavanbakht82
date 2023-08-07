@@ -8,5 +8,5 @@ def shatrangee(a, b) :
             elif i %2 != 0 :
                 print(my_string1[:a],end="")
         print()
-        
+#Example:
 shatrangee(4,5)        
