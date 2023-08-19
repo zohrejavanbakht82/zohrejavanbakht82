@@ -26,13 +26,14 @@ def add():
     print(product)
 def delete():
     ID_DE = input("Enter id product: ")
-    f = open("test23.txt" , "r")
-    for L in f:
-        result = L.split(",")
-        if result[0] != ID_DE :
-            f.write("\n"+L)
-        else :
+    for L in product:
+        if L["ID"] == ID_DE :
+            product.remove(L)
             print("delete shod!!")
+            break
+    else :
+        print("not founded")
+    print(product)
     
 def search():
     key = input("Enter the name product or ID product: ")
@@ -43,14 +44,31 @@ def search():
     else :
         print("not founded.")
 def buy():
-    pass
+    id = input("Enter id product: ")
+    for j in product:
+        if id != j["ID"] :
+            print("not founded!!")
+            break
+        else:
+            num = input("Enter the number for buy: ")
+            if num != j["number"] :
+                print("mojodi kafi nis!!")
+                break
+            else :
+                print("be sabad kharid ezafe shod!")
+                
+                
+            
 def edit():
     id = input("Enter ID product: ")
-    product.remove()
     name = input("Enter a new name : ")
     price = input("Enter the new price: ")
     number = input("Enter the new number : ")
     dic1= {"ID": id , "name": name , "price": price , "number": number}
+    for L in product:
+        if L["ID"] == id :
+            product.remove(L)
+    
     product.append(dic1)
     print("edit shod!!")
     print(product)
